@@ -1,17 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta property="og:type" content="website"/>
-		<title>War</title>
-		<link rel="stylesheet" type="text/css" href="/lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="../styles/main.css">
-	</head>
-	<nav>
-	</nav>
-	<body>
-	</body>
-	
-	<script data-main="javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
-</body>
+  <head>
+    <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Nashville Software School</title>
+  </head>
+  <body>
+    <div class="container-flow">
+      <div class="row">
+        <div id="redCard-player" class="col-xs-4">
+          <!-- Red Player side -->
+          <img class="red-card h" src="images/red-back.png" alt="Red card back">
+          <img class="red-card g" src="images/red-back.png" alt="Red card back">
+          <img class="red-card f" src="images/red-back.png" alt="Red card back">
+          <img id="redCard-card" src="images/red-back.png" alt="Red card back">
+          <span id="redCard-score" class="score invisible">0</span>
+        </div>
+        <div class="col-xs-4">
+          <div>
+            <p id="wartext">WAR!</p>
+            <div id="battle-result" class="invisible">
+              <span id="redCard-name">I</span> <span id="qualifier">I</span> <span id="blueCard-name">I</span>
+            </div>
+          </div>
+          <div id="button-holder">
+            <button id="draw" class="btn btn-default hidden">DRAW!</button>
+            <button id="newgame" class="btn btn-default">&nbsp;&nbsp;&nbsp;New Game&nbsp;&nbsp;&nbsp;</button>
+            <button id="resume" class="btn btn-default">Resume Game</button>
+            <button id="stats" class="btn btn-default">&nbsp;&nbsp;Player Stats&nbsp;&nbsp;</button>
+          </div>
+          <div class="invisible" id="win-announcement">
+            <!-- win text goes here -->
+          </div>
+        </div>
+        <div id="blueCard-player" class="col-xs-4">
+          <!-- Blue Player side -->
+          <img class="blue-card d" src="images/blue-back.png" alt="Blue card back">
+          <img class="blue-card c" src="images/blue-back.png" alt="Blue card back">
+          <img class="blue-card b" src="images/blue-back.png" alt="Blue card back">
+          <img id="blueCard-card" src="images/blue-back.png" alt="Blue card back">
+          <span id="blueCard-score" class="score invisible">0</span>
+        </div>
+      </div>
+    </div>
+    <script data-main="./javascripts/main" src="lib/bower_components/requirejs/require.js"></script>
+  </body>
 </html>
