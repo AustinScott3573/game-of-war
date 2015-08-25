@@ -20,7 +20,7 @@ define(function(require) {
         newGame.redDeck = data.deck_id;
         thisGame = new gameMaker.Game(newGame.redDeck, newGame.blueDeck);
         console.log("thisGame", thisGame);
-        var cardbaseRef = new Firebase("https://nss-card-war.firebaseio.com/");
+        var cardbaseRef = new Firebase("https://game-of-war.firebaseio.com/");
         var theGame = cardbaseRef.child("games").push(thisGame);
         gameRef.setGameRef(theGame);
         $("#newgame").addClass("hidden");
